@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const [sdata, setData] = useState([]);
     const dispatch=useDispatch();
     const addtoCart=(Product)=>{dispatch(addCart(Product))};
-    // console.log(addCart)
+
 
   useEffect(() => {
     //console.log("useeffect");
@@ -26,13 +26,6 @@ const ProductDetails = () => {
     getdata();
   }, []);
   console.log("Data", sdata);
-
-  // const history = useNavigate()
-  // const onSubmit = (Product) => {
-  //   dispatch(addCart(Product))
-  //   history('/cart')
-  // }
-
   return (
     <>
       <h1>Product Details</h1>
@@ -47,10 +40,7 @@ const ProductDetails = () => {
       <div className="col-md-6">
         <h4 className="text-uppercase text-black-50">{sdata.category}</h4>
         <h1 className="display-5">{sdata.title}</h1>
-        {/* <p className="lead fw-bolder">
-          Reting {sdata.rating && sdata.reting.rate}
-          <i className="fa fa-start"></i>
-        </p> */}
+       
         <h3 className="display-6 fw-bold my-4">{sdata.price}</h3>
         <p className='lead'>{sdata.description}</p>
                   <button className='btn btn-outline-dark' onClick={()=>addtoCart(sdata)}>

@@ -26,7 +26,7 @@ const Products = (props) => {
       };
     };
     getProducts();
-    // props.user(data)
+    
   }, []);
 
   const Loding = () => {

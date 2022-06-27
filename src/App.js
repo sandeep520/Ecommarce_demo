@@ -14,8 +14,6 @@ import { useState } from "react";
 import Footer from "./component/Footer";
 import AboutPage from "./component/AboutPage";
 import ContactPage from "./component/ContactPage";
-// import PrivateRoute from './component/Routing/PrivateRoute'
-// import PublicRoute from './component/Routing/PublicRoute'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,7 +26,6 @@ function App() {
     <div className="App">
       <Navbar user={user} logout={logout} />
       <Routes>
-        {/* <Route path="/" element={<Home/>}/> */}
 
         {!user && (
           <>
